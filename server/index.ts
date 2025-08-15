@@ -78,8 +78,9 @@ app.use((req, res, next) => {
   }
 
   // Use environment variables for port and host configuration
-  const port = parseInt(process.env.PORT || "5000", 10);
-  const host = process.env.HOST || "127.0.0.1";
+const port = parseInt(process.env.PORT || "5000", 10);
+const host = process.env.HOST || "0.0.0.0";
+
   
   server.listen(port, host, () => {
     log(`Server running on http://${host}:${port}`);
